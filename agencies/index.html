@@ -1,0 +1,31 @@
+<div class="x-container">
+	<div class="map-container">
+		<div id="x-top"" class="x-top">
+			<form id="agencies-form" action="javascript;:">
+				<div class="s25">
+					<select name="province" id="province" class="styled-select-box blue semi-square"><option value="-1">Chọn tỉnh thành</option></select>
+				</div>
+				<div class="s25">
+					<select name="district" id="district" class="styled-select-box blue semi-square"><option value="-1">Chọn quận huyện</option></select>
+				</div>
+				<div class="s25">
+					<input type="text" id="name" name="name" placeholder="Nhập tên đại lý" />
+				</div>
+				<div class="s25">
+					<button type="submit" class="x-search-button">Tìm kiếm</button>
+				</div>
+				<div class="x-clear"></div>
+			</form>
+		</div>
+		<div id="map" class="map"></div>
+		<div id="x-side" class="x-side"></div>
+	</div>
+</div>
+<div class="x-clear"></div>
+<template id="agency-item-tpl">
+	<div class="itemBox" data-lat="" data-lng="" onclick="xItemClick(this)">
+		<div class="itemTitle"></div>
+		<div class="itemAddress"></div>
+		<div class="itemPhone">Điện thoại: <span class="itemPhoneData"></span></div>
+	</div>
+</template>

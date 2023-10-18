@@ -1,0 +1,128 @@
+<div class="wrap">
+	<h1 class="wp-heading-inline">Agencies</h1>
+	<a href="#agencies/" class="page-title-action">Add New</a>
+	<hr class="wp-header-end">
+	<form id="posts-filter" method="get" action="javascript:;"">
+		<p class="search-box">
+			<label class="screen-reader-text" for="post-search-input">Search:</label>
+			<input type="search" id="post-search-input" name="s" value="">
+			<input type="button" id="search-submit" class="button" value="Search Posts">
+		</p>
+		<div class="tablenav top">
+			<div class="alignleft actions bulkactions">
+				<select name="action" id="bulk-action-selector-top">
+					<option value="-1">Bulk Actions</option>
+					<!-- <option value="trash">Move to Trash</option> -->
+				</select>
+				<input type="submit" id="doaction" class="button action" value="Apply">
+			</div>
+			<div class="tablenav-pages one-page">
+				<span class="displaying-num"><span class="total-num"></span> items</span>
+				<span class="pagination-links">
+					<span class="tablenav-pages-navspan button disabled" aria-hidden="true">«</span>
+					<span class="tablenav-pages-navspan button disabled" aria-hidden="true">‹</span>
+					<span class="paging-input">
+						<label for="current-page-selector" class="screen-reader-text">Current Page</label>
+						<input class="current-page" id="current-page-selector" type="text" name="paged" value="1" size="1" aria-describedby="table-paging">
+						<span class="tablenav-paging-text"> of <span class="total-pages">1</span></span>
+					</span>
+					<span class="tablenav-pages-navspan button disabled" aria-hidden="true">›</span>
+					<span class="tablenav-pages-navspan button disabled" aria-hidden="true">»</span>
+				</span>
+			</div>
+			<br class="clear">
+		</div>
+		<h2 class="screen-reader-text">Posts list</h2>
+		<table class="wp-list-table widefat fixed striped posts">
+			<thead>
+				<tr>
+					<td id="cb" class="manage-column column-cb check-column">
+						<input id="cb-select-all-1" type="checkbox">
+					</td>
+					<th scope="col" id="name" class="manage-column column-title column-primary">Name</th>
+					<th scope="col" id="province" class="manage-column">Province</th>
+					<th scope="col" id="address" class="manage-column">Address</th>
+					<th scope="col" id="phone" class="manage-column">Phone</th>
+				</tr>
+			</thead>
+			<tbody id="the-list">
+
+			</tbody>
+
+			<tfoot>
+				<tr>
+					<td class="manage-column column-cb check-column">
+					<input id="cb-select-all-2" type="checkbox"></td>
+					<th scope="col" class="manage-column column-name column-primary">Name</th>
+					<th scope="col" class="manage-column column-province" >Province</th>
+					<th scope="col" class="manage-column column-address">Address</th>
+					<th scope="col" class="manage-column column-phone">Phone</th>
+				</tr>
+			</tfoot>
+
+		</table>
+		<div class="tablenav bottom">
+			<div class="alignleft actions bulkactions">
+				<select name="action2" id="bulk-action-selector-bottom">
+					<option value="-1">Bulk Actions</option>
+					<!-- <option value="trash">Move to Trash</option> -->
+				</select>
+				<input type="submit" id="doaction2" class="button action" value="Apply">
+			</div>
+			<div class="alignleft actions">
+			</div>
+			<div class="tablenav-pages one-page"><span class="displaying-num"><span class="total-num"></span> items</span>
+				<span class="pagination-links"><span class="tablenav-pages-navspan button disabled"
+						aria-hidden="true">«</span>
+					<span class="tablenav-pages-navspan button disabled" aria-hidden="true">‹</span>
+					<span class="screen-reader-text">Current Page</span><span id="table-paging"
+						class="paging-input"><span class="tablenav-paging-text">1 of <span
+								class="total-pages">1</span></span></span>
+					<span class="tablenav-pages-navspan button disabled" aria-hidden="true">›</span>
+					<span class="tablenav-pages-navspan button disabled" aria-hidden="true">»</span></span>
+			</div>
+			<br class="clear">
+		</div>
+
+	</form>
+
+	<div id="ajax-response"></div>
+	<br class="clear">
+</div>
+
+<template id="agencies_tpl">
+	<tr class="iedit author-self level-0 post-3 type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+		<th scope="row" class="check-column">
+			<input class="agency-checkbox" type="checkbox" name="post[]" value="">
+			<div class="locked-indicator">
+				<span class="locked-indicator-icon" aria-hidden="true"></span>
+			</div>
+		</th>
+		<td class="title column-title has-row-actions column-primary page-title" data-colname="Name">
+			<div class="locked-info"><span class="locked-avatar"></span> <span class="locked-text"></span>
+			</div>
+			<strong>
+				<a class="agency-name row-title agency-edit-link" href="javascript:;"></a>
+			</strong>
+			<div class="row-actions">
+				<span class="edit">
+					<a class="agency-edit-link" href="javascript:;">Edit</a> |
+				</span>
+				<span class="trash">
+					<a class="agency-trash-link submitdelete" href="javascript:;">Trash</a>
+				</span>
+			</div>
+			<button type="button" class="toggle-row"><span class="screen-reader-text">Show more details</span></button>
+		</td>
+		<td class="" data-colname="Province">
+			<a class="agency-province" href="javascript:;"></a>
+		</td>
+		<td class="" data-colname="Address">
+			<a class="agency-address" href="javascript:;"></a>
+		</td>
+		<td class="" data-colname="Phone">
+			<a class="agency-phone" href="javascript:;"></a>
+		</td>
+	</tr>
+</template>
+<div class="clear"></div>

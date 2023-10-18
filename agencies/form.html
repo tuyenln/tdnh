@@ -1,0 +1,42 @@
+<div class="wrap">
+	<h1><input type="button" class="button button-primary" value="‹ Back" onclick="location.hash='#agencies'">&nbsp;Agency</h1>
+	<form id="agency_form" method="post" action="javascript:;">
+		<input type="hidden" id="agency_id" name="id" value="">
+		<input type="hidden" id="lat" name="lat" value="">
+		<input type="hidden" id="lng" name="lng" value="">
+		<table class="form-table">
+			<tbody>
+				<tr>
+					<th scope="row"><label for="name">Name</label></th>
+					<td><input name="name" type="text" id="name" value="" class="regular-text"></td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="address">Phone</label></th>
+					<td><input name="phone" type="text" id="phone" value="" class="regular-text"></td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="address">Address</label></th>
+					<td><input name="address" type="text" id="address" value="" class="regular-text"></td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="province">Province</label></th>
+					<td>
+						<select name="province" id="province"><option value="-1">Choose a value</option></select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="district">District</label></th>
+					<td>
+						<select name="district" id="district"><option value="-1">Choose a value</option></select>
+					</td>
+				</tr>
+
+			</tbody>
+		</table>
+		<div id="map" style="height:400px"></div>
+		<p class="submit">
+			<input type="submit" name="submit" id="submit" class="button button-primary" value="Save">
+		</p>
+	</form>
+
+</div>
