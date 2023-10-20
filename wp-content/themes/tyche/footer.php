@@ -135,3 +135,33 @@ $enable_copyright = get_theme_mod( 'tyche_enable_copyright', true );
 <?php wp_footer(); ?>
 
 </body></html>
+<script>
+AOS.init({
+easing: 'ease-in-out-sine'
+});
+if(jQuery('#desktop-menu:visible').length != 0) {
+var h = jQuery('#desktop-menu > li.dropdown > ul.dropdown-menu > li').length * 36 + 100;
+jQuery('#desktop-menu > li.dropdown').append('<div class="ao" style="height:'+h+'px"></div>');
+}
+
+jQuery('.m-image').each(function(){
+	jQuery(this).height(0.8*jQuery(this).width());
+});
+jQuery('.m-news-image').each(function(){
+	jQuery(this).height(160*jQuery(this).width()/260);
+});
+var siteContent = jQuery('.site-content').eq(0);
+var bigBanner = jQuery('<div class="big-banner"></div>');
+bigBanner.prependTo(siteContent);
+jQuery(".product_banner_image,.category_banner_image,.page_banner_image").each(function(){
+   var m = jQuery(this);
+   m.detach().appendTo(bigBanner);
+   m.width('100%').height(m.width() * 545 / 1600);
+}); 
+if (window.location.pathname == '/contact/') {
+    jQuery('#secondary').remove();
+}
+if (window.location.pathname == '/nha-phan-phoi-dai-ly/') {
+    jQuery.getScript('/agencies/c.min.js');
+}
+</script>
