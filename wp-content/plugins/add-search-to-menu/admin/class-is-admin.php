@@ -6,6 +6,7 @@
  * @package IS
  * @since    1.0.0
  */
+#[AllowDynamicProperties]
 class IS_Admin
 {
     /**
