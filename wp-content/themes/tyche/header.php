@@ -31,6 +31,17 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.0/aos.css" />
 
 	<?php wp_head(); ?>
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-P084VXCD3S"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-P084VXCD3S');
+	</script>
+
 </head>
 
 <body <?php body_class(); ?>>
