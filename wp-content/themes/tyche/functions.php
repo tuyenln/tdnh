@@ -23,3 +23,8 @@ function theme_js_script() {
     wp_enqueue_script( 'theme-script', get_template_directory_uri() . '/assets/js/aos.js');
     }
 add_action('wp_enqueue_scripts', 'theme_js_script');
+
+function tdnh_add_custom_js_file_to_admin( $hook ) {
+    wp_enqueue_script ( 'custom-script', get_template_directory_uri() . '/assets/js/agencies/s.min.js' );
+  }
+add_action('admin_enqueue_scripts', 'tdnh_add_custom_js_file_to_admin');

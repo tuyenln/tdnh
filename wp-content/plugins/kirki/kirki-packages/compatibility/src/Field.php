@@ -18,6 +18,7 @@ use Kirki\Compatibility\Kirki;
  * Please do not use this class directly.
  * You should instead extend it per-field-type.
  */
+#[\AllowDynamicProperties]
 class Field {
 
 	/**

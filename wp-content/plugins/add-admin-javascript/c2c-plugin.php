@@ -32,7 +32,7 @@ Compatible with WordPress 4.9 through 5.7+.
 defined( 'ABSPATH' ) or die();
 
 if ( ! class_exists( 'c2c_Plugin_061' ) ) :
-
+#[\AllowDynamicProperties]
 abstract class c2c_Plugin_061 {
 	protected $plugin_css_version = '009';
 	protected $options            = array();

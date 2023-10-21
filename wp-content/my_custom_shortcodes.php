@@ -94,7 +94,7 @@ function tb_home_product_category($atts) {
 	$catTerms = get_terms('product_cat', array('parent' => $id, 'hide_empty' => 0, 'orderby' => 'ASC'));
 	$output  = '';
 	foreach($catTerms as $catTerm) {
-		$thumbnail_id = get_woocommerce_term_meta($catTerm->term_id, 'thumbnail_id', true);
+		$thumbnail_id = get_term_meta($catTerm->term_id, 'thumbnail_id', true);
 		// $image = wp_get_attachment_url($thumbnail_id);
 		$image = wp_get_attachment_image_src( $thumbnail_id, array(255, 204), true  );
 		$image = count($image) ? $image[0]: '';
