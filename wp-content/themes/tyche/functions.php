@@ -33,3 +33,15 @@ add_action('admin_enqueue_scripts', 'tdnh_add_custom_js_file_to_admin');
 //     function disable_rest_api( $access ) {
 //     return new WP_Error ('rest_disabled', __('The WordPress REST API has been disabled. '), array( 'status' => rest_authorization_required_code()));
 // }
+
+// Disable new user registration email
+function disable_new_user_notification_email($user, $user_pass) {
+  return null;
+}
+add_filter('wp_new_user_notification_email', 'disable_new_user_notification_email', 10, 2);
+
+// Disable password reset email
+function disable_password_reset_email($wp_new_user_notification_email, $user) {
+  return false;
+}
+add_filter('allow_password_reset', 'disable_password_reset_email', 10, 2);
