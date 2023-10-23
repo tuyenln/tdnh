@@ -29,7 +29,7 @@ function tdnh_add_custom_js_file_to_admin( $hook ) {
   }
 add_action('admin_enqueue_scripts', 'tdnh_add_custom_js_file_to_admin');
 
-add_filter('rest_authentication_errors', 'disable_rest_api' );
-    function disable_rest_api( $access ) {
-    return new WP_Error ('rest_disabled', __('The WordPress REST API has been disabled. '), array( 'status' => rest_authorization_required_code()));
-}
+// add_filter('rest_authentication_errors', 'disable_rest_api' );
+//     function disable_rest_api( $access ) {
+//     return new WP_Error ('rest_disabled', __('The WordPress REST API has been disabled. '), array( 'status' => rest_authorization_required_code()));
+// }
